@@ -32,7 +32,7 @@
 # Slightly modified by olivier.berger@it-sudparis.eu (https://github.com/olberger/gpgit/commit/2c32d4ec201e8a3f17a9f4eff83d2514f93433e3)
 # Modified by Etienne Perot
 
-gpgit="`dirname "$0"`/gpgit.pl"
+gpgit="`dirname "$0"`/gpgit"
 
 if [[ -z "$1" || -z "$2" ]]; then
 	echo "Usage is ./encmaildir.sh /path/to/Maildir certificate_user@domain.com [optional arguments passed to 'find' for messages such as '-mtime 0']"
