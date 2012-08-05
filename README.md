@@ -7,7 +7,7 @@ What
 
 Why
 ---
-It partially solves the problem that no one wants to use [PGP] encryption. The email is still in the clear while in transit, but it gets encrypted before it touches your mail server's hard drive. That means mail is still vulnerable to network capture (unless [TLS] is used) and to logging on the intermediate [SMTP] servers, but not vulnerable to [authorities randomly seizing your server][Riseup server seizure], [National Security Letters]  [on your email provider][Jacob Appelbaum email seizure], or other crazy stuff like that.
+It partially solves the problem that no one wants to use [PGP] encryption. The email is still in the clear while in transit, but it gets encrypted before it touches your mail server's hard drive. That means mail is still vulnerable to network capture (unless [TLS] is used) and to logging on the intermediate [SMTP] servers, but not vulnerable to [authorities randomly seizing your server][Riseup server seizure], [National Security Letters][National Security Letter] [on your email provider][Jacob Appelbaum email seizure], or other crazy stuff like that.
 
 How
 ---
@@ -39,7 +39,7 @@ Who
 [TLS]: https://en.wikipedia.org/wiki/Transport_Layer_Security
 [SMTP]: https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol
 [Riseup server seizure]: https://www.eff.org/deeplinks/2012/04/may-firstriseup-server-seizure-fbi-overreaches-yet-again
-[National security letters]: https://en.wikipedia.org/wiki/National_security_letter
+[National security letter]: https://en.wikipedia.org/wiki/National_security_letter
 [Jacob Appelbaum email seizure]: http://online.wsj.com/article/SB10001424052970203476804576613284007315072.html
 [MIME:Tools]: http://search.cpan.org/perldoc?MIME%3A%3ATools
 [Mail::GnuPG]: http://search.cpan.org/perldoc?Mail%3A%3AGnuPG
