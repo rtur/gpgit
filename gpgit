@@ -124,7 +124,7 @@ use MIME::Parser;
 
            ## Keep the new message if it was succesfully flattened
              if( $new_mime->mime_type !~ /^multipart\// ){
-                $new_mime->head->add('X-GPGIT-Flattened-From', $orig_mime_structure );
+                $new_mime->head->add('X-Gpgit-Flattened-From', $orig_mime_structure );
                 $mime = $new_mime;
              }
         }
@@ -134,6 +134,7 @@ use MIME::Parser;
 ## Encrypt
   {
      my $code;
+     $mime->head->add('X-Gpgit-Executed', 'True' );
      if( $encrypt_mode eq 'pgpmime' ){
         $code = $gpg->mime_encrypt( $mime, @recipients );
      } elsif( $encrypt_mode eq 'prefer-inline' ){
