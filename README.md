@@ -17,7 +17,7 @@ How
 
 You need some Perl modules for this to work:
 
-* [MIME:Tools]
+* [MIME::Tools]
 * [Mail::GnuPG]
 
 There are multiple ways to use this in your email system:
