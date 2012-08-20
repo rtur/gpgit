@@ -33,7 +33,7 @@ Only unencrypted emails will be modified. Run `encmaildir.sh` without arguments 
 Who
 ---
 * [Mike Cardwell] for the original script ([`gpgit.pl`][gpgit.pl])
-* [PunchiePets on DSLReports] and [Olivier Berger] for the [original version of `encmaildir.sh`][original version of encmaildir.sh]
+* [PunchiePets on DSLReports] and [Olivier Berger] for the [original version of `encmaildir.sh`][Original version of encmaildir.sh]
 * [Etienne Perot] for modifications to `encmaildir.sh`
 
 [GnuPG]: http://www.gnupg.org/
@@ -57,4 +57,4 @@ Who
 [PunchiePets on DSLReports]: https://secure.dslreports.com/forum/r26276347-
 [Olivier Berger]: https://github.com/olberger
 [Etienne Perot]: https://perot.me/
-[original version of encmaildir.sh]: https://github.com/olberger/gpgit/blob/master/encmaildir.sh
+[Original version of encmaildir.sh]: https://github.com/olberger/gpgit/blob/master/encmaildir.sh
