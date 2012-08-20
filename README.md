@@ -46,7 +46,7 @@ Who
 [Smith v. Maryland]: https://en.wikipedia.org/wiki/Smith_v._Maryland
 [Foreign Intelligence Surveillance Act of 1978 Amendments Act of 2008]: https://en.wikipedia.org/wiki/Foreign_Intelligence_Surveillance_Act_of_1978_Amendments_Act_of_2008
 [Democracy Now - The government has a copy of most of your emails]: http://www.democracynow.org/2012/4/20/whistleblower_the_nsa_is_lying_us
-[MIME:Tools]: http://search.cpan.org/perldoc?MIME%3A%3ATools
+[MIME::Tools]: http://search.cpan.org/perldoc?MIME%3A%3ATools
 [Mail::GnuPG]: http://search.cpan.org/perldoc?Mail%3A%3AGnuPG
 [Exim]: http://www.exim.org/
 [Automatically Encrypting all Incoming Email with Exim]: https://grepular.com/Automatically_Encrypting_all_Incoming_Email
