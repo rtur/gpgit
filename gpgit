@@ -22,6 +22,7 @@
 
 use strict;
 use warnings;
+use English;
 use Mail::GnuPG;
 use MIME::Parser;
 
