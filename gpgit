@@ -58,6 +58,9 @@ use MIME::Parser;
 ## Set the home environment variable from the user running the script
   $ENV{HOME} = (getpwuid($>))[7];
 
+## Set the UID to match the EUID to prevent errors from GnuPG.
+  $< = $>;
+
 ## Object for GPG encryption
   my $gpg = new Mail::GnuPG();
 
