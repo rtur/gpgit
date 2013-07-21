@@ -59,7 +59,7 @@ use MIME::Parser;
   $ENV{HOME} = (getpwuid($>))[7];
 
 ## Set the UID to match the EUID to prevent errors from GnuPG.
-  $< = $>;
+  $REAL_USER_ID = $EFFECTIVE_USER_ID;
 
 ## Object for GPG encryption
   my $gpg = new Mail::GnuPG();
