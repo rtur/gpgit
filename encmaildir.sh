@@ -32,7 +32,7 @@
 # Slightly modified by olivier.berger@it-sudparis.eu (https://github.com/olberger/gpgit/commit/2c32d4ec201e8a3f17a9f4eff83d2514f93433e3)
 # Modified by Etienne Perot
 
-gpgit="`dirname "$0"`/gpgit"
+gpgit="$(dirname "$0")/gpgit"
 
 if [[ -z "$1" || -z "$2" ]]; then
 	echo "Usage is ./encmaildir.sh /path/to/Maildir certificate_user@domain.com [optional arguments passed to 'find' for messages such as '-mtime 0']"
@@ -52,13 +52,15 @@ if [ $? -gt 0 ]; then
 fi
 
 rebuild_index=0
-tempmsg="/tmp/msg_`whoami`"
+
+# Cleanup leftover temporary files, if any.
+find "$1" -type f -name '*.tmp_you_can_delete_me.*' -delete
 
 # Find all files in the Maildir specified.
-echo "Calling /usr/bin/find \"$1\" -type f -regex '.*/\(cur\|new\)/.*' $3"
+echo "Calling \`find \"$1\" -type f -regex '.*/\(cur\|new\)/.*' $3\`"
 while IFS= read -d $'\0' -r mail; do
 	# Create file unreadable except by ourselves
-	touch     "$tempmsg"
+	tempmsg="$(mktemp -p "$mail.tmp_you_can_delete_me.XXXXXXXXXXX")"
 	chmod 600 "$tempmsg"
 
 	# This is where the magic happens
@@ -66,7 +68,7 @@ while IFS= read -d $'\0' -r mail; do
 
 	# Check to see if there are differences between the existing Maildir file and what was created by gpit.pl
 	diff -qa "$mail" "$tempmsg" > /dev/null 2>&1;
-	if [ $? -gt 0 ]; then
+	if [ "$?" -gt 0 ]; then
 		# Preserve timestamps, set ownership.
 		chmod "$tempmsg" --reference="$mail"
 		touch "$tempmsg" --reference="$mail"
