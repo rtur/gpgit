@@ -60,7 +60,7 @@ find "$1" -type f -name '*.tmp_you_can_delete_me.*' -delete
 echo "Calling \`find \"$1\" -type f -regex '.*/\(cur\|new\)/.*' $3\`"
 while IFS= read -d $'\0' -r mail; do
 	# Create file unreadable except by ourselves
-	tempmsg="$(mktemp -p "$mail.tmp_you_can_delete_me.XXXXXXXXXXX")"
+	tempmsg="$(mktemp "$mail.tmp_you_can_delete_me.XXXXXXXXXXX")"
 	chmod 600 "$tempmsg"
 
 	# This is where the magic happens
